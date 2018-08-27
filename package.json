@@ -1,0 +1,36 @@
+{
+  "name": "gulu",
+  "version": "0.0.1",
+  "description": "UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuebi2017/gulu.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI"
+  ],
+  "author": "zyp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuebi2017/gulu/issues"
+  },
+  "homepage": "https://github.com/xuebi2017/gulu#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "vue": "^2.5.17",
+    "vue-hot-reload-api": "^2.3.0"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.2.0",
+    "parcel-bundler": "^1.9.7",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
