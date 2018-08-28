@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +12,44 @@
             margin: 0;
             box-sizing: border-box;
         }
+
         :root {
             --button-height: 32px;
+            --button-line-height: 32px;
             --font-size: 14px;
             --button-bg: white;
-            --button-active-bg:#eee;
+            --button-active-bg: #eee;
             --button-radius: 4px;
             --color: #333;
             --border-color: #999;
             --border-color-hover: #666;
         }
+
         #app {
             margin: 20px 0 0 20px;
         }
+
         body {
             font-size: var(--font-size);
         }
     </style>
+    <style>
+       
+    </style>
 <link rel="stylesheet" href="/app.883b5a5f.css"></head>
+
 <body>
     <div id="app">
-        <g-button></g-button>
+        <g-button icon="settings" icon-position="right">
+            按钮
+        </g-button>
+        <g-button icon="settings" icon-position="left">
+            按钮
+        </g-button>
+        <g-button icon-position="left">
+            按钮
+        </g-button>
+        <!-- <g-icon name="loading"></g-icon> -->
     </div>
     <!-- <script  src="./node_modules/vue/dist/vue.min.js"></script>
     <script src="./button.js"></script>
@@ -39,5 +57,7 @@
       
     </script> -->
     <script src="/app.883b5a5f.js"></script>
+    <script src="//at.alicdn.com/t/font_811902_xhnt9mhir9q.js"></script>
 </body>
+
 </html>
