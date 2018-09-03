@@ -40,16 +40,22 @@
 
 <body>
     <div id="app">
-        <g-button icon="settings" icon-position="right">
+        <g-button icon="settings" icon-position="right" :loading="loading" @click.native="loading = !loading">
             按钮
         </g-button>
-        <g-button icon="settings" icon-position="left">
+        <g-button icon="settings" icon-position="left" :loading="true">
             按钮
         </g-button>
-        <g-button icon-position="left">
+        <g-button icon-position="right" icon="settings" :loading="true">
             按钮
         </g-button>
-        <!-- <g-icon name="loading"></g-icon> -->
+        <g-button-group class="g-button-group">
+            <div>
+                <g-button icon="left">上一页</g-button>
+            </div>
+            <g-button >更多</g-button>
+            <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
     </div>
     <!-- <script  src="./node_modules/vue/dist/vue.min.js"></script>
     <script src="./button.js"></script>

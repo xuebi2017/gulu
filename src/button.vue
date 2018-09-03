@@ -1,7 +1,7 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-        <g-icon v-if="icon" :name="icon"></g-icon>
-        <g-icon class="loading" name="loading"></g-icon>
+        <g-icon v-if="icon && !loading" :name="icon"></g-icon>
+        <g-icon class="loading icon" name="loading" v-if="loading"></g-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -14,6 +14,10 @@ export default {
         icon: {
             // type: String,
             // default: 'loading'
+        },
+        loading: {
+            type: Boolean,
+            default: false,
         },
         iconPosition: {
             type: String,
@@ -70,6 +74,10 @@ export default {
         }
         > .loading {
             animation: spin 2s infinite linear;
+            // transition: all 2s linear;
+            // &:hover {
+            //     transform: rotate(360deg);
+            // }
         }
     }
 </style>
