@@ -33,37 +33,44 @@
       body {
         font-size: var(--font-size);
       }
+
+      .box {
+        margin: 20px;
+      }
     </style>
     <style></style>
   </head>
 
   <body>
     <div id="app">
-      <g-button
-        icon-position="left"
-        :loading="loading"
-        @click.native="loading = !loading"
-      >
-        按钮
-      </g-button>
-      <g-button icon="settings" icon-position="left" :loading="false">
-        按钮
-      </g-button>
-      <g-button icon-position="right" icon="settings" :loading="true">
-        按钮
-      </g-button>
-      <!-- <g-button-group class="g-button-group">
-            <g-button icon="left">上一页</g-button>
-            <g-button >更多</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group> -->
+      <div class="box">
+        <g-button
+          icon-position="left"
+          :loading="loading"
+          @click.native="loading = !loading"
+        >
+          按钮
+        </g-button>
+        <g-button icon="settings" icon-position="left" :loading="false">
+          按钮
+        </g-button>
+        <g-button icon-position="right" icon="settings" :loading="true">
+          按钮
+        </g-button>
+        <g-button-group class="g-button-group">
+          <g-button icon="left">上一页</g-button>
+          <g-button>更多</g-button>
+          <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
+      </div>
+      <div class="box"> 
+        <g-input value="张三"></g-input>
+        <g-input value="李四" :disabled="true"></g-input>
+        <g-input value="王五" :readonly="true"></g-input>
+        <g-input value="王二麻子" error="姓名不能多于三个字"></g-input>
+      </div>
     </div>
-    <!-- <script  src="./node_modules/vue/dist/vue.min.js"></script>
-    <script src="./button.js"></script>
-    <script>
-      
-    </script> -->
     <script src="./src/app.js"></script>
-    <!-- <script src="//at.alicdn.com/t/font_811902_xhnt9mhir9q.js"></script> -->
+    <!-- <script src="//at.alicdn.com/t/font_811902_sogz64okv6.js"></script> -->
   </body>
 </html>
