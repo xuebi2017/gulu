@@ -69,8 +69,14 @@ describe("Input", () => {
         vm.$on(eventName, callback);
         const inputElement = vm.$el.querySelector("input");
         let event = new Event(eventName);
+        Object.defineProperty(event, 'target', {
+          value: {
+            value: 'hi'
+          }
+        })
         inputElement.dispatchEvent(event);
-        expect(callback).to.have.been.calledWith(event);
+        console.log('event--->', event)
+        expect(callback).to.have.been.calledWith('hi');
       });
     });
     // it("支持change", () => {

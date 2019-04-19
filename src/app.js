@@ -13,20 +13,21 @@ Vue.component('g-input', Input)
 new Vue({
     el: "#app",
     data: {
-        loading: false
+        loading: false,
+        message: ''
     },
     methods: {
         change(e) {
-            console.log(e.target.value)
+           this.message = e
         },
         input(e) {
-            console.log(e.target.value)
+            // console.log(e.target.value)
         },
         focus(e) {
-            console.log(e.target.value)
+            // console.log(e.target.value)
         },
         blur(e) {
-            console.log(e.target.value)
+            // console.log(e.target.value)
         }
     }
 })

@@ -64,7 +64,9 @@
         </g-button-group>
       </div>
       <div class="box"> 
-        <g-input value="张三" @change="change" @input="input" $focus="focus" $blur="blur"></g-input>
+        <g-input v-model="message"></g-input>
+        {{message}}
+        <!-- <g-input value="张三" @change="change" @input="input" @focus="focus" @blur="blur"></g-input> -->
         <g-input value="李四" :disabled="true"></g-input>
         <g-input value="王五" :readonly="true"></g-input>
         <g-input value="王二麻子" error="姓名不能多于三个字"></g-input>

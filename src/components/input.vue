@@ -2,19 +2,20 @@
   <div class="wrapper">
     <input
       type="text"
-      :value="value"
+      :value="inputValue"
       :disabled="disabled"
       :readonly="readonly"
       :class="dangerClass"
-      @change="changeValue($event)"
-      @input="$emit('input', $event)"
-      @focus="$emit('focus', $event)"
-      @blur="$emit('blur', $event)"
+      @change="changeValue($event.target.value)"
+      @input="inputHandler($event.target.value)"
+      @focus="$emit('focus', $event.target.value)"
+      @blur="$emit('blur', $event.target.value)"
     >
     <template v-if="error">
       <g-icon name="error" class="icon-error"></g-icon>
       <span class="error-message">{{error}}</span>
     </template>
+    <!-- <p>{{inputValue}}</p> -->
   </div>
 </template>
 <script>
@@ -25,7 +26,8 @@ export default {
     return {
       dangerClass: {
         error: this.error
-      }
+      },
+      inputValue: this.value
     };
   },
   props: {
@@ -47,10 +49,19 @@ export default {
   components: {
     "g-icon": Icon
   },
+  created() {
+    // setInterval(() => {
+    //   this.inputValue += "!";
+    // }, 1000);
+  },
   computed: {},
   methods: {
     changeValue($event) {
-      this.$emit('change', $event)
+      this.$emit("change", $event);
+    },
+    inputHandler(event) {
+      this.$emit("input", event);
+      // this.inputValue = event.target.value;
     }
   }
 };
