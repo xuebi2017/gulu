@@ -14,5 +14,19 @@ new Vue({
     el: "#app",
     data: {
         loading: false
+    },
+    methods: {
+        change(e) {
+            console.log(e.target.value)
+        },
+        input(e) {
+            console.log(e.target.value)
+        },
+        focus(e) {
+            console.log(e.target.value)
+        },
+        blur(e) {
+            console.log(e.target.value)
+        }
     }
 })

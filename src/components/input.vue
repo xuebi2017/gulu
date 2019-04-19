@@ -6,6 +6,10 @@
       :disabled="disabled"
       :readonly="readonly"
       :class="dangerClass"
+      @change="changeValue($event)"
+      @input="$emit('input', $event)"
+      @focus="$emit('focus', $event)"
+      @blur="$emit('blur', $event)"
     >
     <template v-if="error">
       <g-icon name="error" class="icon-error"></g-icon>
@@ -44,7 +48,11 @@ export default {
     "g-icon": Icon
   },
   computed: {},
-  methods: {}
+  methods: {
+    changeValue($event) {
+      this.$emit('change', $event)
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
